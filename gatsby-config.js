@@ -30,7 +30,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/icon/gatsby.png`,
+        icon: `${__dirname}/src/images/icon/gatsby.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -38,4 +38,4 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-offline`,
   ],
-}
+};
