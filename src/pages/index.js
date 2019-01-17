@@ -1,26 +1,26 @@
-import React from 'react'
-import { Link, graphql } from 'gatsby'
+import React from 'react';
+import { graphql } from 'gatsby';
 
-import Layout from '../components/Layout'
-import SEO from '../components/seo'
+import { Layout, SEO, Hero } from '../components/elements';
 
-class BlogIndex extends React.Component {
+class IndexPg extends React.Component {
   render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
+    const { data } = this.props;
+    const siteTitle = data.site.siteMetadata.title;
 
     return (
       <Layout title={siteTitle}>
         <SEO
           title="Home"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          keywords={[`starter`, `gatsby`, `javascript`, `react`]}
         />
+        <Hero />
       </Layout>
-    )
+    );
   }
 }
 
-export default BlogIndex
+export default IndexPg;
 
 export const pageQuery = graphql`
   query {
@@ -30,4 +30,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
