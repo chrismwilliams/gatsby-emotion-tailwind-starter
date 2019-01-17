@@ -11,7 +11,7 @@ const StyledUL = styled.ul`
       ${tw`mr-auto flex items-center text-purple-dark`}
     }
     a {
-      ${tw`block px-8 py-6 hover:bg-purple-light hover:text-white`};
+      ${tw`block px-8 py-6 hover:bg-purple-dark hover:text-white`};
     }
   }
 `;
