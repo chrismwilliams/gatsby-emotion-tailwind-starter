@@ -3,21 +3,47 @@ import { StaticQuery, graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from '@emotion/styled';
 
+const StyledHeader = styled.header`
+  &::before {
+    ${tw`block w-full`};
+    content: '';
+    background: linear-gradient(
+      90deg,
+      #663399 0%,
+      #b721ff 20%,
+      #ffb238 60%,
+      #73fff7 95%
+    );
+    height: 5px;
+  }
+`;
+
 const StyledUL = styled.ul`
-  ${tw`flex items-center`}
+  ${tw`flex items-center`};
   > li {
-    ${tw`text-xl text-black font-bold uppercase`}
+    ${tw`text-xl text-black font-bold uppercase`};
     &.logo {
-      ${tw`mr-auto flex items-center text-purple-dark`}
+      ${tw`mr-auto flex items-center`};
+      color: #663399;
     }
     a {
-      ${tw`block px-8 py-6 hover:bg-purple-dark hover:text-white`};
+      ${tw`block px-10 py-8`};
+      &:hover {
+        background: linear-gradient(
+            90deg,
+            #663399 0%,
+            #b721ff 20%,
+            #ffb238 60%,
+            #73fff7 95%
+          )
+          fixed;
+      }
     }
   }
 `;
 
 const Logo = styled(Img)`
-  ${tw`ml-8 mr-3 w-12 h-full`}
+  ${tw`ml-8 mr-3 w-12 h-full`};
 `;
 
 export default function header() {
@@ -26,8 +52,8 @@ export default function header() {
       query={logoQuery}
       render={({ siteLogo }) => {
         return (
-          <header>
-            <nav>
+          <StyledHeader>
+            <nav role="navigation">
               <StyledUL>
                 <li className="logo">
                   <Logo
@@ -44,7 +70,7 @@ export default function header() {
                 </li>
               </StyledUL>
             </nav>
-          </header>
+          </StyledHeader>
         );
       }}
     />
