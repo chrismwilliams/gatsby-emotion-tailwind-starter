@@ -5,11 +5,11 @@ import styled from '@emotion/styled';
 import globalStyles from '../../styles/global';
 import 'typeface-open-sans';
 
-import Header from './header';
-import Footer from './footer';
+import Header from '../header';
+import Footer from '../footer';
 
 const Wrapper = styled.div`
-  ${tw`font-sans font-black`};
+  ${tw`font-sans font-black font-normal`};
 `;
 
 export default function Layout({ children }) {
