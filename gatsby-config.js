@@ -3,7 +3,7 @@ module.exports = {
     title: `Gatsby Emotion Tailwind Starter`,
     author: `Chris Williams`,
     description: `An example Gatsby starter making use of emotion and tailwind`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://gatsby-emotion-tailwind-starter.netlify.com/`,
   },
   plugins: [
     {
