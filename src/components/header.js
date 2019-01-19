@@ -23,19 +23,24 @@ const StyledUL = styled.ul`
   > li {
     ${tw`flex-grow sm:flex-no-grow text-xl font-bold uppercase text-center`};
     &.logo {
-      ${tw`sm:mr-auto min-w-full sm:min-w-0 py-4 sm:py-0 flex justify-center items-center text-purple-dark`};
+      ${tw`sm:mr-auto min-w-full sm:min-w-0`};
+      a {
+        ${tw`py-4 sm:py-2 flex justify-center items-center text-purple-dark`};
+      }
     }
-    a {
-      ${tw`block px-6 md:px-10 py-8 text-black`};
-      &:hover {
-        background: linear-gradient(
-            90deg,
-            #663399 0%,
-            #b721ff 20%,
-            #ffb238 60%,
-            #73fff7 95%
-          )
-          fixed;
+    &:nth-child(n + 2) {
+      a {
+        ${tw`block px-6 md:px-10 py-8 text-black`};
+        &:hover {
+          background: linear-gradient(
+              90deg,
+              #663399 0%,
+              #b721ff 20%,
+              #ffb238 60%,
+              #73fff7 95%
+            )
+            fixed;
+        }
       }
     }
   }
@@ -55,11 +60,13 @@ export default function header() {
             <nav role="navigation">
               <StyledUL>
                 <li className="logo">
-                  <Logo
-                    fluid={siteLogo.childImageSharp.fluid}
-                    alt="The site logo, showing a simple thunderbolt"
-                  />
-                  Gatsby Starter
+                  <Link to="/">
+                    <Logo
+                      fluid={siteLogo.childImageSharp.fluid}
+                      alt="The site logo, showing a simple thunderbolt"
+                    />
+                    Gatsby Starter
+                  </Link>
                 </li>
                 <li>
                   <Link to="/">Home</Link>
