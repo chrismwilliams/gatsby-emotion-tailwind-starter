@@ -5,7 +5,7 @@ const StyledFooter = styled.footer`
   ${tw`p-8 flex justify-center items-center bg-purple-darker text-white`};
 
   a {
-    ${tw`inline-block p-2 border-0 border-b border-dotted`}
+    ${tw`inline-block p-2 border-0 border-b border-dotted text-center text-sm sm:text-base font-semibold`}
   }
 `;
 
