@@ -13,6 +13,10 @@ const AboutContent = styled.section`
   }
 `;
 
+const StyledFiller = styled.div`
+  ${tw`p-32`};
+`;
+
 export default function aboutPage({ data }) {
   const { keyboardImg } = data;
   return (
@@ -32,6 +36,7 @@ export default function aboutPage({ data }) {
               Photo by Anas Alshanti on Unsplash
             </a>
           </Card>
+          <StyledFiller />
         </AboutContent>
       </ContentWrapper>
     </Layout>
