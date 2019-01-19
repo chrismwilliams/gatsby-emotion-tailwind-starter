@@ -19,15 +19,14 @@ const StyledHeader = styled.header`
 `;
 
 const StyledUL = styled.ul`
-  ${tw`flex items-center`};
+  ${tw`flex flex-wrap justify-center sm:justify-between items-center`};
   > li {
-    ${tw`text-xl text-black font-bold uppercase`};
+    ${tw`flex-grow sm:flex-no-grow text-xl font-bold uppercase text-center`};
     &.logo {
-      ${tw`mr-auto flex items-center`};
-      color: #663399;
+      ${tw`sm:mr-auto min-w-full sm:min-w-0 py-4 sm:py-0 flex justify-center items-center text-purple-dark`};
     }
     a {
-      ${tw`block px-10 py-8`};
+      ${tw`block px-6 md:px-10 py-8 text-black`};
       &:hover {
         background: linear-gradient(
             90deg,
@@ -43,7 +42,7 @@ const StyledUL = styled.ul`
 `;
 
 const Logo = styled(Img)`
-  ${tw`ml-8 mr-3 w-12 h-full`};
+  ${tw`sm:ml-8 w-16 h-full`};
 `;
 
 export default function header() {
@@ -58,7 +57,7 @@ export default function header() {
                 <li className="logo">
                   <Logo
                     fluid={siteLogo.childImageSharp.fluid}
-                    alt="Gatsby Javascript Logo"
+                    alt="The site logo, showing a simple thunderbolt"
                   />
                   Gatsby Starter
                 </li>
@@ -79,9 +78,9 @@ export default function header() {
 
 const logoQuery = graphql`
   query LogoQuery {
-    siteLogo: file(relativePath: { regex: "/gatsby.png/" }) {
+    siteLogo: file(relativePath: { regex: "/logo.png/" }) {
       childImageSharp {
-        fluid(maxWidth: 80) {
+        fluid(maxWidth: 100) {
           ...GatsbyImageSharpFluid
         }
       }
