@@ -1,6 +1,5 @@
 {
   "name": "gatsby-emotion-tailwind-starter",
-  "private": true,
   "description": "A starter Gatsby site which includes Emotion and Tailwind",
   "version": "1.0.0",
   "author": "Chris Williams",
@@ -40,7 +39,6 @@
   "scripts": {
     "dev": "gatsby develop -o",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
     "format": "prettier --trailing-comma es5 --single-quote --write 'src/**/*.js' 'src/**/*.md'",
     "develop": "gatsby develop",
     "start": "gatsby develop",
