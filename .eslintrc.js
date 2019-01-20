@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es6: true,
   },
-  plugins: ['react'],
+  plugins: ['tailwind-components', 'react'],
   globals: {
     graphql: false,
     tw: true,
@@ -15,4 +15,4 @@ module.exports = {
       jsx: true,
     },
   },
-}
+};
