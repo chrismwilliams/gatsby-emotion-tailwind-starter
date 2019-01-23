@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: `https://gatsby-emotion-tailwind-starter.netlify.com/`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
