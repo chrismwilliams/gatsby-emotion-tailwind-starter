@@ -59,7 +59,10 @@ const StyledDiv = styled.div`
   ${tw`flex justify-center items-center`}
 `
 
-# <StyledDiv /> is now a flex container with centred children!
+<StyledDiv>
+  <p>I'm centred</p>
+  <p>Me too!</p>
+</StyledDiv>
 ```
 
 The [tailwind website](https://tailwindcss.com/docs/what-is-tailwind/) has great documentation to get you started.
