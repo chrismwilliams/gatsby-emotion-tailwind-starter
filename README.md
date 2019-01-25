@@ -51,18 +51,22 @@ yarn build
 
 With the CSS utility library Tailwind you can quickly add styles, even adding responsive styles for different screen sizes without having to write any css. Emotion allows you to name and style elements within your js files.
 
-```sh
-## remember to import styled from 'emotion'
-# creating a styled div, centring children using flex
+```JSX
+/*
+  remember to import styled from 'emotion'
+  creating a styled div, centring children using flex
+*/
 
 const StyledDiv = styled.div`
   ${tw`flex justify-center items-center`}
 `
 
-<StyledDiv>
-  <p>I'm centred</p>
-  <p>Me too!</p>
-</StyledDiv>
+return (
+  <StyledDiv>
+    <p>I'm centred</p>
+    <p>Me too!</p>
+  </StyledDiv>
+);
 ```
 
 The [tailwind website](https://tailwindcss.com/docs/what-is-tailwind/) has great documentation to get you started.
