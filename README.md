@@ -53,7 +53,8 @@ With the CSS utility library Tailwind you can quickly add styles, even adding re
 
 ```JSX
 /*
-  remember to import styled from 'emotion'
+  !remember to import styled from '@emotion/styled'
+
   creating a styled div, centring children using flex
 */
 
