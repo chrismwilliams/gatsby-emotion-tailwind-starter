@@ -7,9 +7,13 @@
   Gatsby Emotion Tailwind Starter
 </h1>
 
-A starter template to create lightening fast static websites. Comes pre-built with Gatsby, Emotion, and Tailwind to get you up and running quickly. Inspired by [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog)
+<p align="center">
+  <img src="https://api.netlify.com/api/v1/badges/55304957-dc11-4f85-9975-157021aa405a/deploy-status" alt="Netlify Deploy Status">
+</p>
 
-[Demo](https://gatsby-emotion-tailwind-starter.netlify.com) hosted on Netlify
+A starter template to create a lightening-fast static website. Comes pre-built with Gatsby, Emotion, and Tailwind to get you up and running quickly. Inspired by the [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog)
+
+[Demo](https://gatsby-emotion-tailwind-starter.netlify.com) hosted on Netlify.
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/chrismwilliams/gatsby-emotion-tailwind-starter)
 
@@ -55,7 +59,7 @@ With the CSS utility library Tailwind you can quickly add styles, even adding re
 /*
   !remember to import styled from '@emotion/styled'
 
-  creating a styled div, centring children using flex
+  creating a styled div, centring children via flex-box
 */
 
 const StyledDiv = styled.div`
@@ -74,7 +78,7 @@ The [tailwind website](https://tailwindcss.com/docs/what-is-tailwind/) has great
 
 **Customisation**
 
-- [Tailwind config](https://tailwindcss.com/docs/configuration). Open up the tailwind.js file to set your own project preferences & requirements, such as break-points, colors, and fonts
+- [Tailwind config](https://tailwindcss.com/docs/configuration). Open up the tailwind.js file to set your own project preferences & requirements, such as break-points, colours, and fonts
 
 - Edit the global styles (`src/styles/global.js`) which is injected into every page, or remove entirely
 
