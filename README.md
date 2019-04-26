@@ -32,7 +32,7 @@ A starter template to create a lightening-fast static website. Comes pre-built w
 ## Getting started
 
 ```sh
-# downloading the template
+# download the template zip via dropdown or
 git clone https://github.com/chrismwilliams/gatsby-emotion-tailwind-starter.git
 ```
 
@@ -44,22 +44,22 @@ _Navigate into template directory_
 # install dependencies
 yarn install
 
-# run development
+# development with hot re-load
 yarn dev
 
-# run a build
+# build for production
 yarn build
 ```
 
 **Using Emotion & Tailwind**
 
-With the CSS utility library Tailwind you can quickly add styles, even adding responsive styles for different screen sizes without having to write any css. Emotion allows you to name and style elements within your js files.
+With the CSS utility library Tailwind you can quickly add styles and responsive design, all without having to write any css. Emotion allows you to name and style elements within your js files.
 
 ```JSX
 /*
   !remember to import styled from '@emotion/styled'
 
-  creating a styled div, centring children via flex-box
+  creating a styled div, centering children via flex-box
 */
 
 const StyledDiv = styled.div`
@@ -90,4 +90,4 @@ The [tailwind website](https://tailwindcss.com/docs/what-is-tailwind/) has great
 
 - Favicon. Auto-generated from [gatsby-plugin-manifest](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-manifest#readme) set in `gatsby-config.js`. Replace the current favicon (`src/images/icon/logo.png`) with your own 512x512 icon
 
-- Analytics. Add your google analytics id into the `gatsby-config.js` file to get started
+- Analytics. Add your google analytics id into the `gatsby-config.js` file, or import it via a .env to get started.
