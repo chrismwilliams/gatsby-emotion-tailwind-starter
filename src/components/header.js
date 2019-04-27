@@ -1,5 +1,5 @@
 import React from 'react';
-import { StaticQuery, graphql, Link } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from '@emotion/styled';
 
@@ -51,39 +51,34 @@ const Logo = styled(Img)`
 `;
 
 export default function header() {
+  const { siteLogo } = useStaticQuery(LogoQuery);
+
   return (
-    <StaticQuery
-      query={logoQuery}
-      render={({ siteLogo }) => {
-        return (
-          <StyledHeader>
-            <nav role="navigation">
-              <StyledUL>
-                <li className="logo">
-                  <Link to="/">
-                    <Logo
-                      fluid={siteLogo.childImageSharp.fluid}
-                      alt="The site logo, showing a simple thunderbolt"
-                    />
-                    Gatsby Starter
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="about">About</Link>
-                </li>
-              </StyledUL>
-            </nav>
-          </StyledHeader>
-        );
-      }}
-    />
+    <StyledHeader>
+      <nav role="navigation">
+        <StyledUL>
+          <li className="logo">
+            <Link to="/">
+              <Logo
+                fluid={siteLogo.childImageSharp.fluid}
+                alt="The site logo, showing a simple thunderbolt"
+              />
+              Gatsby Starter
+            </Link>
+          </li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="about">About</Link>
+          </li>
+        </StyledUL>
+      </nav>
+    </StyledHeader>
   );
 }
 
-const logoQuery = graphql`
+const LogoQuery = graphql`
   query LogoQuery {
     siteLogo: file(relativePath: { regex: "/logo.png/" }) {
       childImageSharp {
