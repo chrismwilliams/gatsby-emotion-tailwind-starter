@@ -21,7 +21,7 @@ export default function aboutPage({ data }) {
   const { keyboardImg } = data;
   return (
     <Layout>
-      <SEO title="About" />
+      <SEO title="About" description="About Us page" />
       <ContentWrapper>
         <h1>About Page</h1>
         <AboutContent>
