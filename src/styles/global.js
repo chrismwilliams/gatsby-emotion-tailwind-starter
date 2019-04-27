@@ -18,12 +18,6 @@ const injectGlobal = css`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  html,
-  body {
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-  }
   a {
     text-decoration: none;
     color: inherit;
