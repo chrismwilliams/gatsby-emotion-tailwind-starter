@@ -1,26 +1,20 @@
 import React from 'react';
-import { Global } from '@emotion/core';
-import styled from '@emotion/styled';
 
-import globalStyles from '../../styles/global';
+import { ThemeProvider } from '../context/theme';
 import 'typeface-open-sans';
 
+import PageWrapper from './pageWrapper';
 import Header from '../header';
 import Footer from '../footer';
 
-const Wrapper = styled.div`
-  ${tw`font-sans font-black font-normal`};
-`;
-
 export default function Layout({ children }) {
   return (
-    <>
-      <Global styles={globalStyles} />
-      <Wrapper>
+    <ThemeProvider>
+      <PageWrapper>
         <Header />
         {children}
         <Footer />
-      </Wrapper>
-    </>
+      </PageWrapper>
+    </ThemeProvider>
   );
 }
