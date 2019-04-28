@@ -28,6 +28,7 @@ A starter template to create a lightening-fast static website. Comes pre-built w
 - Lazy loading images with webp support
 - Auto-Generated sitemap
 - Google Analytics
+- Light & Dark mode, stored via localStorage
 
 ## Getting started
 
@@ -82,7 +83,7 @@ The [tailwind website](https://tailwindcss.com/docs/what-is-tailwind/) has great
 
 - Edit the global styles (`src/styles/global.js`) which is injected into every page, or remove entirely
 
-- A layout component (`src/components/elements/layout.js`) is used for wrapping every page, setting a default layout and importing the template's Open Sans font
+- A layout component (`src/components/elements/layout.js`) is used for wrapping every page, setting a default layout and imports the template's Open Sans font
 
 - This template uses the plugin [gatsby-plugin-subfont](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-subfont#readme) together with [typefaces](https://github.com/KyleAMathews/typefaces/blob/master/README.md) to optimise font delivery. Changing font(s) simply requires installing your favourite typeface-font and importing into layout.js, or removing it altogether. Remember to add your font(s) into the tailwind.js config, into either the fonts sans/serif array, in order to use it with tailwind
 
@@ -91,3 +92,5 @@ The [tailwind website](https://tailwindcss.com/docs/what-is-tailwind/) has great
 - Favicon. Auto-generated from [gatsby-plugin-manifest](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-manifest#readme) set in `gatsby-config.js`. Replace the current favicon (`src/images/icon/logo.png`) with your own 512x512 icon
 
 - Analytics. Add your google analytics id into the `gatsby-config.js` file, or import it via a .env to get started.
+
+- Light / Dark theme. Import the useTheme hook to get/set theme settings, which are stored in localStorage
