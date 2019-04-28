@@ -9,7 +9,7 @@ const AboutContent = styled.section`
   ${tw`mx-auto mt-12 max-w-xl`};
 
   a {
-    ${tw`inline-block mt-4 ml-auto p-2 text-sm font-semibold border-0 border-b border-dotted`};
+    ${tw`mt-4 ml-auto p-1 inline-block text-sm font-semibold border-0 border-b border-dotted`};
   }
 `;
 
