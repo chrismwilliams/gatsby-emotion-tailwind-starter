@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import styled from '@emotion/styled';
 
-import useTheme from '../hooks/useTheme';
+import useTheme from '../../hooks/useTheme';
 
 const StyledToggle = styled.div`
   ${tw`ml-4 px-6 flex items-center`};

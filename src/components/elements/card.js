@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import useTheme from '../hooks/useTheme';
+import useTheme from '../../hooks/useTheme';
 
 const StyledCard = styled.div`
   ${tw`p-6 relative flex flex-col bg-white text-black shadow-md`};

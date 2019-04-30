@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import useTheme from '../hooks/useTheme';
+import useTheme from '../../hooks/useTheme';
 
 const HeroWrapper = styled.div`
   ${tw`px-2 lg:px-0 min-h-screen flex items-center justify-center lg:justify-start bg-grey-lightest`};

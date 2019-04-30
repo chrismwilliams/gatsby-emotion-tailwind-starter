@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ThemeProvider } from '../context/theme';
+import { ThemeProvider } from '../../context/theme';
 import 'typeface-open-sans';
 
 import PageWrapper from './pageWrapper';

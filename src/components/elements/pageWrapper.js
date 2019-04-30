@@ -2,7 +2,7 @@ import React from 'react';
 import { Global } from '@emotion/core';
 import styled from '@emotion/styled';
 
-import useTheme from '../hooks/useTheme';
+import useTheme from '../../hooks/useTheme';
 import globalStyles from '../../styles/global';
 
 const StyledWrapper = styled.div`

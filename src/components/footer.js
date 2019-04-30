@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import useTheme from './hooks/useTheme';
+import useTheme from '../hooks/useTheme';
 
 const StyledFooter = styled.footer`
   ${tw`p-8 flex flex-col justify-center items-center bg-teal-dark text-white`};

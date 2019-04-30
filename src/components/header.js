@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 import styled from '@emotion/styled';
 
 import ToggleTheme from './elements/toggleThemeMode';
-import useTheme from './hooks/useTheme';
+import useTheme from '../hooks/useTheme';
 
 const StyledHeader = styled.header`
   ${tw`flex flex-wrap items-center shadow-md`};
