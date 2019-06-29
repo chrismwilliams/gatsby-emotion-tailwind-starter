@@ -6,7 +6,6 @@ import {
   Hero,
   ContentWrapper,
   CardGrid,
-  Card,
 } from '../components/elements';
 
 export default function indexPage() {
