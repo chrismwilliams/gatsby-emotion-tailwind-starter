@@ -85,7 +85,7 @@ The [tailwind website](https://tailwindcss.com/docs/what-is-tailwind/) has great
 
 - A layout component (`src/components/elements/layout.js`) is used for wrapping every page, setting a default layout and imports the template's Open Sans font
 
-- This template uses the plugin [gatsby-plugin-subfont](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-subfont#readme) together with [typefaces](https://github.com/KyleAMathews/typefaces/blob/master/README.md) to optimise font delivery. Changing font(s) simply requires installing your favourite typeface-font and importing into layout.js, or removing it altogether. Remember to add your font(s) into the tailwind.js config, into either the fonts sans/serif array, in order to use it with tailwind
+- This template uses the plugin [typefaces](https://github.com/KyleAMathews/typefaces/blob/master/README.md) to optimise font delivery. Changing font(s) simply requires installing your favourite typeface-font and importing into layout.js, or removing it altogether. Remember to add your font(s) into the tailwind.js config, into either the fonts sans/serif array, in order to use it with tailwind
 
 - SEO component, taken from [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog), allowing you to add your meta/descriptions/title's
 

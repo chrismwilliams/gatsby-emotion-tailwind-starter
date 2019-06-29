@@ -41,7 +41,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-subfont`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-offline`,
   ],
