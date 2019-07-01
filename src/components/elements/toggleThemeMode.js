@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import useTheme from '../../hooks/useTheme';
+import { useThemeMode, useThemeModifier } from '../../hooks/useTheme';
 
 const StyledToggle = styled.div`
   ${tw`ml-4 px-6 flex items-center`};
@@ -33,23 +33,21 @@ const StyledToggle = styled.div`
 `;
 
 export default function toggleThemeMode() {
-  const { getThemeMode, setThemeMode } = useTheme();
+  const updateTheme = useThemeModifier();
+  const mode = useThemeMode();
 
   const handleToggle = e => {
-    if (e.target.checked) {
-      setThemeMode('dark');
-    } else {
-      setThemeMode('light');
-    }
+    const themeMode = e.target.checked ? 'dark' : 'light';
+    updateTheme({ mode: themeMode });
   };
 
   return (
-    <StyledToggle className={getThemeMode}>
+    <StyledToggle className={mode}>
       <input
         type="checkbox"
         id="toggle"
         aria-label="Switch between Dark and Light mode"
-        defaultChecked={getThemeMode === 'dark' ? true : false}
+        defaultChecked={mode === 'dark' ? true : false}
         onChange={handleToggle}
       />
       <label htmlFor="toggle" />
