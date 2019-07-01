@@ -1,7 +1,7 @@
 {
   "name": "gatsby-emotion-tailwind-starter",
   "description": "A starter Gatsby site which includes Emotion and Tailwind",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "author": "Chris Williams",
   "repository": "https://github.com/chrismwilliams/gatsby-emotion-tailwind-starter",
   "dependencies": {

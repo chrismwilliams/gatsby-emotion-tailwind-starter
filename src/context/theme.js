@@ -1,18 +1,22 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const ThemeContext = React.createContext();
+const initialTheme = {
+  mode: 'light',
+};
+
+function getStoredTheme() {
+  if (typeof window !== 'undefined') {
+    const theme = window.localStorage.getItem('theme');
+    return theme ? JSON.parse(theme) : initialTheme;
+  }
+  return initialTheme;
+}
 
 function ThemeProvider(props) {
-  const initialThemeSetting = () => {
-    const defaultTheme = { mode: 'light' };
-    if (typeof window !== 'undefined') {
-      return JSON.parse(window.localStorage.getItem('theme')) || defaultTheme;
-    }
-    return defaultTheme;
-  };
-  const [theme, setTheme] = React.useState(initialThemeSetting);
+  const [theme, setTheme] = React.useState(() => getStoredTheme());
 
-  useEffect(() => {
+  React.useEffect(() => {
     window.localStorage.setItem('theme', JSON.stringify(theme));
   }, [theme]);
 
