@@ -2,35 +2,23 @@ import React from 'react';
 
 import { ThemeContext } from '../context/theme';
 
-export default function useTheme() {
-  const [theme, setTheme] = React.useContext(ThemeContext);
-
-  const getThemeMode = React.useMemo(() => {
-    return theme.mode;
-  }, [theme.mode]);
-
-  const setThemeMode = mode => {
-    setTheme(prevState => {
-      return {
-        ...prevState,
-        mode,
-      };
-    });
-  };
-
-  const setThemeToLight = () => {
-    setThemeMode('light');
-  };
-
-  const setThemeToDark = () => {
-    setThemeMode('dark');
-  };
-
-  return {
-    theme,
-    getThemeMode,
-    setThemeMode,
-    setThemeToLight,
-    setThemeToDark,
-  };
+function useTheme() {
+  const context = React.useContext(ThemeContext);
+  return context;
 }
+
+function useThemeMode() {
+  const [{ mode }] = useTheme();
+  return React.useMemo(() => mode, [mode]);
+}
+
+function useThemeModifier() {
+  const [, setTheme] = useTheme();
+
+  return changes =>
+    setTheme(prevState => {
+      return { ...prevState, ...changes };
+    });
+}
+
+export { useTheme, useThemeMode, useThemeModifier };
