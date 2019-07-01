@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 import styled from '@emotion/styled';
 
 import ToggleTheme from './elements/toggleThemeMode';
-import useTheme from '../hooks/useTheme';
+import { useThemeMode } from '../hooks/useTheme';
 
 const StyledHeader = styled.header`
   ${tw`flex flex-wrap items-center shadow-md`};
@@ -64,12 +64,12 @@ const Logo = styled(Img)`
 
 export default function header() {
   const { siteLogo } = useStaticQuery(LogoQuery);
-  const { getThemeMode } = useTheme();
+  const mode = useThemeMode();
 
   return (
     <StyledHeader>
       <nav role="navigation">
-        <StyledUL className={getThemeMode}>
+        <StyledUL className={mode}>
           <li className="logo">
             <Link to="/">
               <Logo

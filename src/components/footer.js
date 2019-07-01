@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import useTheme from '../hooks/useTheme';
+import { useThemeMode } from '../hooks/useTheme';
 
 const StyledFooter = styled.footer`
   ${tw`p-8 flex flex-col justify-center items-center bg-teal-dark text-white`};
@@ -16,9 +16,9 @@ const StyledFooter = styled.footer`
 `;
 
 export default function footer() {
-  const { getThemeMode } = useTheme();
+  const mode = useThemeMode();
   return (
-    <StyledFooter className={getThemeMode}>
+    <StyledFooter className={mode}>
       <a
         href="https://github.com/chrismwilliams/gatsby-emotion-tailwind-starter"
         rel="nofollow noopener noreferrer"

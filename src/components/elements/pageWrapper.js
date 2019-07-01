@@ -2,7 +2,7 @@ import React from 'react';
 import { Global } from '@emotion/core';
 import styled from '@emotion/styled';
 
-import useTheme from '../../hooks/useTheme';
+import { useThemeMode } from '../../hooks/useTheme';
 import globalStyles from '../../styles/global';
 
 const StyledWrapper = styled.div`
@@ -13,9 +13,9 @@ const StyledWrapper = styled.div`
 `;
 
 export default function pageWrapper({ children }) {
-  const { getThemeMode } = useTheme();
+  const mode = useThemeMode();
   return (
-    <StyledWrapper className={getThemeMode}>
+    <StyledWrapper className={mode}>
       <Global styles={globalStyles} />
       {children}
     </StyledWrapper>

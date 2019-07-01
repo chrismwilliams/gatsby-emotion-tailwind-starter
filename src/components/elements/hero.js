@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import useTheme from '../../hooks/useTheme';
+import { useThemeMode } from '../../hooks/useTheme';
 
 const HeroWrapper = styled.div`
   ${tw`px-2 lg:px-0 min-h-screen flex items-center justify-center lg:justify-start bg-grey-lightest`};
@@ -31,14 +31,14 @@ const HeroTxt = styled.div`
 `;
 
 export default function hero() {
-  const { getThemeMode } = useTheme();
+  const mode = useThemeMode();
   return (
-    <HeroWrapper className={getThemeMode}>
+    <HeroWrapper className={mode}>
       <HeroTxt>
         <h1>Gatsby Emotion Tailwind Starter</h1>
         <p>
           Welcome to your new starter, now go build something cool{' '}
-          {getThemeMode === 'light' ? '😃' : '😎'}
+          {mode === 'light' ? '😃' : '😎'}
         </p>
       </HeroTxt>
     </HeroWrapper>

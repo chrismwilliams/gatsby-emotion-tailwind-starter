@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import useTheme from '../../hooks/useTheme';
+import { useThemeMode } from '../../hooks/useTheme';
 
 const StyledCard = styled.div`
   ${tw`p-6 relative flex flex-col bg-white text-black shadow-md`};
@@ -13,9 +13,9 @@ const StyledCard = styled.div`
 `;
 
 export default function card({ title, children }) {
-  const { getThemeMode } = useTheme();
+  const mode = useThemeMode();
   return (
-    <StyledCard className={getThemeMode}>
+    <StyledCard className={mode}>
       {title && <h3>{title}</h3>}
       {children}
     </StyledCard>
