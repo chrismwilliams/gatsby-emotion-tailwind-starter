@@ -1,6 +1,5 @@
 import React from 'react';
-import { useStaticQuery, graphql, Link } from 'gatsby';
-import Img from 'gatsby-image';
+import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 
 import ToggleTheme from './elements/toggleThemeMode';
@@ -58,12 +57,14 @@ const StyledUL = styled.ul`
   }
 `;
 
-const Logo = styled(Img)`
-  ${tw`sm:ml-8 w-16 h-full`};
+const Logo = styled.div`
+  ${tw`sm:ml-8 w-16`};
+  svg {
+    ${tw`h-full`};
+  }
 `;
 
 export default function header() {
-  const { siteLogo } = useStaticQuery(LogoQuery);
   const mode = useThemeMode();
 
   return (
@@ -71,11 +72,23 @@ export default function header() {
       <nav role="navigation">
         <StyledUL className={mode}>
           <li className="logo">
-            <Link to="/">
-              <Logo
-                fluid={siteLogo.childImageSharp.fluid}
-                alt="The site logo, showing a simple thunderbolt"
-              />
+            <Link to="/" aria-label="Homepage">
+              <Logo>
+                <svg
+                  width="38"
+                  height="68"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 35.0667L23.0662 2v30.9333h13.1664L15.1664 66V35.0667H2z"
+                    fill="#FFB238"
+                    stroke="#639"
+                    stroke-width="3"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </Logo>
               Gatsby Starter
             </Link>
           </li>
@@ -91,15 +104,3 @@ export default function header() {
     </StyledHeader>
   );
 }
-
-const LogoQuery = graphql`
-  query LogoQuery {
-    siteLogo: file(relativePath: { regex: "/logo.png/" }) {
-      childImageSharp {
-        fluid(maxWidth: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`;
