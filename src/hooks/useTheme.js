@@ -7,18 +7,9 @@ function useTheme() {
   return context;
 }
 
-function useThemeMode() {
-  const [{ mode }] = useTheme();
-  return React.useMemo(() => mode, [mode]);
+function handleToggle(e, setTheme) {
+  const themeMode = e.target.checked ? 'dark' : 'light';
+  setTheme(themeMode);
 }
 
-function useThemeModifier() {
-  const [, setTheme] = useTheme();
-
-  return changes =>
-    setTheme(prevState => {
-      return { ...prevState, ...changes };
-    });
-}
-
-export { useTheme, useThemeMode, useThemeModifier };
+export { useTheme, handleToggle };

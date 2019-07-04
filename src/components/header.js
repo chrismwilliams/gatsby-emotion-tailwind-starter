@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 
-import ToggleTheme from './elements/toggleThemeMode';
-import { useThemeMode } from '../hooks/useTheme';
+import { ToggleTheme } from './elements';
 
 const StyledHeader = styled.header`
   ${tw`flex flex-wrap items-center shadow-md`};
+
   &::before {
     ${tw`block w-full`};
     content: '';
@@ -31,7 +31,8 @@ const StyledUL = styled.ul`
     &.logo {
       ${tw`sm:mr-auto min-w-full sm:min-w-0`};
       a {
-        ${tw`py-4 sm:py-2 flex justify-center items-center text-purple-dark`};
+        ${tw`py-4 sm:py-2 flex justify-center items-center`};
+        color: var(--logoTitle);
       }
     }
     &:nth-of-type(n + 2) {
@@ -50,11 +51,6 @@ const StyledUL = styled.ul`
       }
     }
   }
-  &.dark {
-    .logo a {
-      ${tw`text-orange-light`};
-    }
-  }
 `;
 
 const Logo = styled.div`
@@ -65,12 +61,10 @@ const Logo = styled.div`
 `;
 
 export default function header() {
-  const mode = useThemeMode();
-
   return (
     <StyledHeader>
       <nav role="navigation">
-        <StyledUL className={mode}>
+        <StyledUL>
           <li className="logo">
             <Link to="/" aria-label="Homepage">
               <Logo>

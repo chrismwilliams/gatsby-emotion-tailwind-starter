@@ -81,7 +81,7 @@ The [tailwind website](https://tailwindcss.com/docs/what-is-tailwind/) has great
 
 - [Tailwind config](https://tailwindcss.com/docs/configuration). Open up the tailwind.js file to set your own project preferences & requirements, such as break-points, colours, and fonts
 
-- Edit the global styles (`src/styles/global.js`) which is injected into every page, or remove entirely
+- Edit the global styles (`src/styles/global.js`) which is injected into every page. Included are some default styles, along with light and dark mode assigned css variables which can be accessed throughout the component tree.
 
 - A layout component (`src/components/elements/layout.js`) is used for wrapping every page, setting a default layout and imports the template's Open Sans font
 
@@ -93,4 +93,4 @@ The [tailwind website](https://tailwindcss.com/docs/what-is-tailwind/) has great
 
 - Analytics. Add your google analytics id into the `gatsby-config.js` file, or import it via a .env to get started.
 
-- Light / Dark theme. Import the useTheme hook to get/set theme settings, which are stored in localStorage
+- Light / Dark theme. Import the useTheme hook to get/set theme settings, which are stored in localStorage and sets the body's class name
