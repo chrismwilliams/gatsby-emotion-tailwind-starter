@@ -1,12 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Emotion Tailwind Starter`,
     author: `Chris Williams`,
+    title: `Gatsby Emotion Tailwind Starter`,
     description: `An example Gatsby starter making use of emotion and tailwind`,
     siteUrl: `https://gatsby-emotion-tailwind-starter.netlify.com/`,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-emotion`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -14,18 +18,27 @@ module.exports = {
         name: `images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        useMozJpeg: false,
-        stripMetadata: true,
-      },
-    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [
+          require('tailwindcss')('./tailwind.config.js'),
+          require('autoprefixer'),
+          require('cssnano'),
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        tailwind: true,
+        purgeOnly: ['src/css/styles.css'],
       },
     },
     {
@@ -41,8 +54,6 @@ module.exports = {
         theme_color_in_head: false,
       },
     },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-emotion`,
     `gatsby-plugin-offline`,
   ],
 };
