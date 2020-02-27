@@ -1,4 +1,5 @@
 import React from 'react';
+import tw from 'twin.macro';
 import styled from '@emotion/styled';
 
 const StyledFooter = styled.footer`
@@ -8,7 +9,7 @@ const StyledFooter = styled.footer`
     ${tw`p-1 inline-block border-0 border-b border-dotted text-center text-sm sm:text-base font-semibold`}
   }
   p {
-    ${tw`mt-4 text-sm text-grey-lighter font-bold`};
+    ${tw`mt-4 text-sm text-gray-300 font-bold`};
   }
 `;
 

@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import tw from 'twin.macro';
 import styled from '@emotion/styled';
 
-import { ToggleTheme } from './elements';
+// import { ToggleTheme } from './elements';
 
 const StyledHeader = styled.header`
   ${tw`flex flex-wrap items-center shadow-md`};
@@ -27,7 +28,7 @@ const StyledHeader = styled.header`
 const StyledUL = styled.ul`
   ${tw`flex flex-wrap justify-center sm:justify-between items-center`};
   li {
-    ${tw`flex-grow sm:flex-no-grow text-xl font-bold uppercase text-center`};
+    ${tw`flex-grow sm:flex-grow-0 text-xl font-bold uppercase text-center`};
     &.logo {
       ${tw`sm:mr-auto min-w-full sm:min-w-0`};
       a {
@@ -94,7 +95,7 @@ export default function header() {
           </li>
         </StyledUL>
       </nav>
-      <ToggleTheme />
+      {/* <ToggleTheme /> */}
     </StyledHeader>
   );
 }

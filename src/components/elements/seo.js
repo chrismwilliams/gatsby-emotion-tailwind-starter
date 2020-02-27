@@ -1,89 +1,48 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 
-function SEO({ description, lang, meta, keywords, title }) {
-  const { site } = useStaticQuery(DetailsQuery);
-  const metaDescription = description || site.siteMetadata.description;
-
+export default function SEO({ title, description }) {
+  const {
+    site: { siteMetadata },
+  } = useStaticQuery(seoQuery);
+  const seo = {
+    title: title || siteMetadata.title,
+    description: description || siteMetadata.description,
+    url: siteMetadata.siteUrl,
+    author: siteMetadata.author,
+  };
   return (
     <Helmet
-      htmlAttributes={{
-        lang,
-      }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ]
-        .concat(
-          keywords.length > 0
-            ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
-              }
-            : []
-        )
-        .concat(meta)}
-    />
+      defaultTitle={siteMetadata.title}
+      titleTemplate={`%s - ${siteMetadata.title}`}
+    >
+      <html lang="en-GB" />
+      <meta name="description" content={seo.description} />
+      <meta property="og:locale" content="en_UK" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={seo.title} />
+      <meta property="og:description" content={seo.description} />
+      <meta property="og:url" content={seo.url} />
+    </Helmet>
   );
 }
 
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  keywords: [],
-};
-
 SEO.propTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  lang: PropTypes.string,
-  meta: PropTypes.array,
-  keywords: PropTypes.arrayOf(PropTypes.string),
+  description: PropTypes.string,
 };
 
-export default SEO;
-
-const DetailsQuery = graphql`
+const seoQuery = graphql`
   query DefaultSEOQuery {
     site {
       siteMetadata {
         title
         description
         author
+        siteUrl
       }
     }
   }

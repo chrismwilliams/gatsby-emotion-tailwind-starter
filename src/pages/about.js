@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import tw from 'twin.macro';
 import styled from '@emotion/styled';
 
 import { Layout, SEO, ContentWrapper, Card } from '../components/elements';

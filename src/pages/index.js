@@ -14,7 +14,6 @@ export default function indexPage() {
       <SEO
         title="Home"
         description="Home page for a Gatsby Starter, featuring Emotion and Tailwind css"
-        keywords={[`starter`, `gatsby`, `javascript`, `react`]}
       />
       <Hero />
       <ContentWrapper>
