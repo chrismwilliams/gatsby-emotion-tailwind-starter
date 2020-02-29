@@ -1,12 +1,6 @@
 import React from 'react';
 
-import {
-  Layout,
-  SEO,
-  Hero,
-  ContentWrapper,
-  CardGrid,
-} from '../components/elements';
+import { Layout, SEO, Hero, CardGrid } from '../components/elements';
 
 export default function indexPage() {
   return (
@@ -16,9 +10,7 @@ export default function indexPage() {
         description="Home page for a Gatsby Starter, featuring Emotion and Tailwind css"
       />
       <Hero />
-      <ContentWrapper>
-        <CardGrid />
-      </ContentWrapper>
+      <CardGrid />
     </Layout>
   );
 }

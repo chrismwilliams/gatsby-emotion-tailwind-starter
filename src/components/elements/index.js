@@ -1,9 +1,7 @@
 import Layout from './layout';
 import Hero from './hero';
 import SEO from './seo';
-import ContentWrapper from './contentWrapper';
-import CardGrid from './cardGrid';
+import CardGrid from './card-grid';
 import Card from './card';
-// import ToggleTheme from './toggleTheme';
 
-export { Layout, Hero, SEO, ContentWrapper, CardGrid, Card };
+export { Layout, Hero, SEO, CardGrid, Card };
