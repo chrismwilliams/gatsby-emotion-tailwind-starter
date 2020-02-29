@@ -1,6 +1,6 @@
 import React from 'react';
 
-import PageWrapper from './pageWrapper';
+import PageWrapper from './page-wrapper';
 import Header from '../header';
 import Footer from '../footer';
 
