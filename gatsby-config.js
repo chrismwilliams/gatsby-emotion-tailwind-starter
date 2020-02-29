@@ -1,3 +1,5 @@
+require('dotenv').config({ path: `.env` });
+
 module.exports = {
   siteMetadata: {
     author: `Chris Williams`,
@@ -21,7 +23,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        // Create a .env file
+        trackingId: process.env.GOOGLE_ANALYTICS,
       },
     },
     {
