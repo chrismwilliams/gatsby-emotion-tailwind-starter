@@ -1,17 +1,11 @@
 import React from 'react';
-import styled from '@emotion/styled';
 
 import Card from './card';
+import StyledCardGrid from './styled/card-grid';
 
-const CardGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1.5rem;
-`;
-
-export default function cardGrid(props) {
+export default function CardGrid() {
   return (
-    <CardGrid {...props}>
+    <StyledCardGrid>
       <Card title="Card 1">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
@@ -44,6 +38,6 @@ export default function cardGrid(props) {
           et! Veniam ab quam architecto debitis soluta.
         </p>
       </Card>
-    </CardGrid>
+    </StyledCardGrid>
   );
 }
