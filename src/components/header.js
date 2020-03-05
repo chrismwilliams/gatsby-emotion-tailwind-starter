@@ -30,7 +30,7 @@ export default function header() {
             <Link to="/about">about</Link>
           </li>
           <li>
-            <Link to="/contact">contact</Link>
+            <a href="#links">links</a>
           </li>
         </ul>
       </nav>
