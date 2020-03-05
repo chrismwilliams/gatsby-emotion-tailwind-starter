@@ -1,19 +1,27 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 
 import StyledFooter from './styled/footer';
+import SocialList from './elements/social-list';
 
-export default function footer() {
+export default function Footer() {
+  const {
+    site: { siteMetadata },
+  } = useStaticQuery(AuthorQuery);
   return (
     <StyledFooter>
-      <a
-        href="https://github.com/chrismwilliams/gatsby-emotion-tailwind-starter"
-        rel="nofollow noopener noreferrer"
-        target="_blank"
-        aria-label="github"
-      >
-        Gatsby Emotion Tailwind Starter
-      </a>
-      <p>Created by Chris Williams</p>
+      <SocialList id="links" />
+      <p>Created by {siteMetadata.author}</p>
     </StyledFooter>
   );
 }
+
+const AuthorQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        author
+      }
+    }
+  }
+`;
