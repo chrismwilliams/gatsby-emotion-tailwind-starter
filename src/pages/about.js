@@ -1,28 +1,17 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import tw from 'twin.macro';
-import styled from '@emotion/styled';
 
 import { Layout, SEO, Card } from '../components/elements';
-
-const AboutContent = styled.section`
-  ${tw`mx-auto mt-12 max-w-xl`};
-
-  a {
-    ${tw`mt-4 ml-auto p-1 inline-block text-sm font-semibold border-0 border-b border-dotted`};
-  }
-`;
-
-const StyledFiller = tw.div`p-32`;
+import StyledAboutPg from '../components/styled/about-pg';
 
 export default function aboutPage({ data }) {
   const { keyboardImg } = data;
   return (
     <Layout>
       <SEO title="About" description="About Us page" />
-      <h1>About Page</h1>
-      <AboutContent>
+      <StyledAboutPg>
+        <h1>About me</h1>
         <Card>
           <Img fluid={keyboardImg.childImageSharp.fluid} />
           <a
@@ -34,13 +23,12 @@ export default function aboutPage({ data }) {
             Photo by Anas Alshanti on Unsplash
           </a>
         </Card>
-        <StyledFiller />
-      </AboutContent>
+      </StyledAboutPg>
     </Layout>
   );
 }
 
-export const aboutQuery = graphql`
+export const AboutQuery = graphql`
   query {
     keyboardImg: file(relativePath: { regex: "/keyboard.jpg/" }) {
       childImageSharp {
