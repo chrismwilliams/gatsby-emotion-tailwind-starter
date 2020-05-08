@@ -23,7 +23,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        // Create a .env file
         trackingId: process.env.GOOGLE_ANALYTICS,
       },
     },
@@ -41,7 +40,6 @@ module.exports = {
       resolve: `gatsby-plugin-purgecss`,
       options: {
         tailwind: true,
-        purgeOnly: ['src/css/styles.css'],
       },
     },
     {
