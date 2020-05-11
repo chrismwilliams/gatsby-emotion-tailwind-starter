@@ -10,8 +10,23 @@ export default function Footer() {
   } = useStaticQuery(AuthorQuery);
   return (
     <StyledFooter>
-      <SocialList id="links" />
-      <p>Created by {siteMetadata.author}</p>
+      <p className="title">
+        <svg>
+          <use xlinkHref="/logo.svg#logo" />
+        </svg>
+        {siteMetadata.title}
+      </p>
+      <SocialList />
+      <p className="author">
+        Created by{' '}
+        <a
+          href="https://github.com/chrismwilliams/gatsby-emotion-tailwind-starter"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {siteMetadata.author}
+        </a>
+      </p>
     </StyledFooter>
   );
 }
@@ -20,6 +35,7 @@ const AuthorQuery = graphql`
   query {
     site {
       siteMetadata {
+        title
         author
       }
     }
