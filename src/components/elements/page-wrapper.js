@@ -1,7 +1,7 @@
 import React from 'react';
 import tw from 'twin.macro';
 
-const StyledWrapper = tw.div`min-h-screen font-normal`;
+const StyledWrapper = tw.div`min-h-screen font-normal text-gray-700 max-w-6xl mx-auto`;
 
 export default function PageWrapper({ children }) {
   return <StyledWrapper>{children}</StyledWrapper>;
