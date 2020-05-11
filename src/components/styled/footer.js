@@ -2,9 +2,26 @@ import tw from 'twin.macro';
 import styled from '@emotion/styled';
 
 const StyledFooter = styled.footer`
-  ${tw`mt-40 p-24 flex flex-col justify-center items-center text-3xl text-white bg-indigo-500 hover:bg-indigo-700`};
-  p {
-    ${tw`mt-4 text-lg`};
+  ${tw`flex flex-col items-center justify-center mt-40 py-6 text-3xl border-t-2`};
+  a {
+    ${tw`hover:text-orange-500`};
+  }
+  .title {
+    ${tw`text-lg font-semibold text-purple-600`};
+    svg {
+      ${tw`inline-block w-10 mr-4`};
+      max-width: 28px;
+      max-height: 50px;
+    }
+  }
+  .social-list {
+    ${tw`mt-4 text-2xl`}
+  }
+  .author {
+    ${tw`mt-2 text-sm font-light text-gray-600`};
+    a {
+      ${tw`underline`};
+    }
   }
 `;
 
