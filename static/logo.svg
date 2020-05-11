@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="title" aria-describedby="desc" role="img">
+  <symbol id="logo" viewBox="0 0 38 68">
+  <title id="title">Gatsby Emotion Tailwind Starter</title>
+  <desc id="desc">Site logo</desc>
+    <path
+      d="M2 35.0667L23.0662 2v30.9333h13.1664L15.1664 66V35.0667H2z"
+      fill="#FFB238"
+      stroke="#639"
+      stroke-width="3"
+      stroke-linejoin="round"
+    />
+  </symbol>
+</svg>
