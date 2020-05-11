@@ -10,19 +10,8 @@ export default function header() {
         <ul>
           <li className="logo">
             <Link to="/" aria-label="Homepage">
-              <svg
-                width="38"
-                height="68"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2 35.0667L23.0662 2v30.9333h13.1664L15.1664 66V35.0667H2z"
-                  fill="#FFB238"
-                  stroke="#639"
-                  stroke-width="3"
-                  stroke-linejoin="round"
-                />
+              <svg>
+                <use xlinkHref="/logo.svg#logo" />
               </svg>
             </Link>
           </li>
