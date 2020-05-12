@@ -1,7 +1,7 @@
 {
   "name": "gatsby-emotion-tailwind-starter",
   "description": "A starter Gatsby site which includes Emotion and Tailwind",
-  "version": "1.4.1",
+  "version": "2.0.0",
   "author": "Chris Williams",
   "repository": "https://github.com/chrismwilliams/gatsby-emotion-tailwind-starter",
   "dependencies": {
@@ -12,7 +12,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/react-fontawesome": "^0.1.9",
     "dotenv": "^8.2.0",
-    "gatsby": "^2.21.20",
+    "gatsby": "^2.21.23",
     "gatsby-image": "^2.4.3",
     "gatsby-plugin-emotion": "^4.3.1",
     "gatsby-plugin-google-analytics": "^2.3.1",
