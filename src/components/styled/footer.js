@@ -2,7 +2,7 @@ import tw from 'twin.macro';
 import styled from '@emotion/styled';
 
 const StyledFooter = styled.footer`
-  ${tw`flex flex-col items-center justify-center mt-40 py-6 text-3xl border-t-2`};
+  ${tw`flex flex-col items-center justify-center mt-40 py-6 text-3xl text-gray-600 border-t-2`};
   a {
     ${tw`hover:text-orange-500`};
   }
@@ -18,9 +18,9 @@ const StyledFooter = styled.footer`
     ${tw`mt-4 text-2xl`}
   }
   .author {
-    ${tw`mt-2 text-sm font-light text-gray-600`};
+    ${tw`mt-2 text-sm font-light`};
     a {
-      ${tw`underline`};
+      ${tw`tracking-wider border-b-2 border-orange-500`};
     }
   }
 `;
