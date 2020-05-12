@@ -16,10 +16,10 @@ export default function header() {
             </Link>
           </li>
           <li>
-            <Link to="/about">about</Link>
+            <Link to="/">home</Link>
           </li>
           <li>
-            <a href="#links">links</a>
+            <Link to="/about">about</Link>
           </li>
         </ul>
       </nav>
