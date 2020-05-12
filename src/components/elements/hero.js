@@ -507,8 +507,15 @@ export default function Hero() {
         <h2>
           I come pre-packed with Gatsby JS, Emotion, and Tailwind CSS. I come
           with some cool modern features, like lazy-loading images, code and
-          data splitting, and offline support via service workers. Now go build
-          something cool!
+          data splitting, and offline support. Check out the source code{' '}
+          <a
+            href="https://github.com/chrismwilliams/gatsby-emotion-tailwind-starter"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            here
+          </a>{' '}
+          and go build something cool!
         </h2>
         <div className="tech">
           <ul>
