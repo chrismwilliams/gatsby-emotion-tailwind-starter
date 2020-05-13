@@ -13,7 +13,7 @@
 
 A starter template to create a lightening-fast static website. Comes pre-built with Gatsby, Emotion, and Tailwind to get you up and running quickly. Inspired by the [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog)
 
-[Demo](https://gatsby-emotion-tailwind-starter.netlify.com) hosted on Netlify.
+[Demo](https://gatsby-emotion-tailwind-starter.netlify.app) hosted on Netlify.
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/chrismwilliams/gatsby-emotion-tailwind-starter)
 
