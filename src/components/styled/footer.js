@@ -16,6 +16,9 @@ const StyledFooter = styled.footer`
   }
   .social-list {
     ${tw`mt-4 text-2xl`}
+    svg {
+      ${tw`block w-6!`};
+    }
   }
   .author {
     ${tw`mt-2 text-sm font-light`};
