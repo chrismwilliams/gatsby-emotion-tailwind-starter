@@ -22,13 +22,11 @@ A starter template to create a lightening-fast static website. Comes pre-built w
 - React static generator [GatsbyJS](https://www.gatsbyjs.org/) v2
 - CSS-in-JS library [Emotion](https://emotion.sh/) for your styled components
 - CSS utility framework [Tailwind CSS](https://tailwindcss.com/docs/what-is-tailwind/) to quickly add style
-- Built to customise à la carte to your preference and/or work-flow
 - Offline Support
 - Progressive Web App
 - Lazy loading images with webp support
 - Auto-Generated sitemap
 - Google Analytics
-- Light & Dark mode, stored via localStorage
 
 ## Getting started
 
@@ -75,22 +73,18 @@ return (
 );
 ```
 
-The [tailwind website](https://tailwindcss.com/docs/what-is-tailwind/) has great documentation to get you started.
+The [tailwind website](https://tailwindcss.com) has great documentation to get you started. The starter uses [twin.macro](https://github.com/ben-rogerson/twin.macro) which also has some additional helpful utilities.
 
 **Customisation**
 
-- [Tailwind config](https://tailwindcss.com/docs/configuration). Open up the tailwind.js file to set your own project preferences & requirements, such as break-points, colours, and fonts
+- [Tailwind config](https://tailwindcss.com/docs/configuration). Open up the `tailwind.config.js` file to set your own project preferences & requirements, such as break-points, colours, and fonts.
 
-- Edit the global styles (`src/styles/global.js`) which is injected into every page. Included are some default styles, along with light and dark mode assigned css variables which can be accessed throughout the component tree.
+- A layout component (`src/components/elements/layout.js`) is used for setting a standardised default layout.
 
-- A layout component (`src/components/elements/layout.js`) is used for wrapping every page, setting a default layout and imports the template's Open Sans font
+- This template uses the plugin [typefaces](https://github.com/KyleAMathews/typefaces/blob/master/README.md) to optimise font delivery. Changing font(s) simply requires installing your favourite typeface-font and importing into `gatsby-browser.js`. Remember to add your font(s) into `tailwind.config.js`, either the fonts sans/serif array, in order to use it with tailwind utilities.
 
-- This template uses the plugin [typefaces](https://github.com/KyleAMathews/typefaces/blob/master/README.md) to optimise font delivery. Changing font(s) simply requires installing your favourite typeface-font and importing into layout.js, or removing it altogether. Remember to add your font(s) into the tailwind.js config, into either the fonts sans/serif array, in order to use it with tailwind
-
-- SEO component, taken from [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog), allowing you to add your meta/descriptions/title's
+- SEO component, taken from [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog), allowing you to add your SEO descriptions & title's.
 
 - Favicon. Auto-generated from [gatsby-plugin-manifest](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-manifest#readme) set in `gatsby-config.js`. Replace the current favicon (`src/images/icon/logo.png`) with your own 512x512 icon
 
-- Analytics. Add your google analytics id into the `gatsby-config.js` file, or import it via a .env to get started.
-
-- Light / Dark theme. Import the useTheme hook to get/set theme settings, which are stored in localStorage and sets the body's class name
+- Analytics. Add your google analytics id via an .env file `GOOGLE_ANALYTICS` to get started.
