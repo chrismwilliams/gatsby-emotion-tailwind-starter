@@ -2,7 +2,7 @@ import tw from 'twin.macro';
 import styled from '@emotion/styled';
 
 const StyledAboutPg = styled.section`
-  ${tw`mx-auto mt-32 px-2 text-gray-700 md:px-8`};
+  ${tw`mx-auto mt-32 px-2 text-gray-700 md:px-16`};
 
   h1 {
     ${tw`text-4xl font-extrabold leading-tight text-gray-800 md:text-6xl`};
@@ -45,7 +45,7 @@ const StyledAboutPg = styled.section`
     }
     &.features {
       ul {
-        ${tw`list-disc list-inside md:list-outside`};
+        ${tw`list-disc list-inside`};
         a {
           ${tw`border-orange-500 hover:text-orange-500`};
         }
