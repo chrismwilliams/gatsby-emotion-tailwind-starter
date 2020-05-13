@@ -505,9 +505,9 @@ export default function Hero() {
           </svg>
         </div>
         <h2>
-          I come pre-packed with Gatsby JS, Emotion, and Tailwind CSS. I come
-          with some cool modern features, like lazy-loading images, code and
-          data splitting, and offline support. Check out the source code{' '}
+          I'm a Gatsby JS starter pre-packed with Emotion and Tailwind CSS. I
+          come with some cool modern features, like lazy-loading images, code
+          and data splitting, and offline support. Check out the source code{' '}
           <a
             href="https://github.com/chrismwilliams/gatsby-emotion-tailwind-starter"
             target="_blank"
