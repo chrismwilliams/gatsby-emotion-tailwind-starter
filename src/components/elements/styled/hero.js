@@ -1,7 +1,7 @@
 import tw from 'twin.macro';
 import styled from '@emotion/styled';
 
-const StyledHero = styled.div`
+const StyledHero = styled.section`
   min-height: calc(100vh - 250px);
   .hero-wrapper {
     ${tw`grid grid-cols-1 mt-16 px-2 md:mt-32 md:grid-cols-6 md:px-16`};

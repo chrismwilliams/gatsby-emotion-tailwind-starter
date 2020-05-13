@@ -1,7 +1,7 @@
 import tw from 'twin.macro';
 import styled from '@emotion/styled';
 
-const StyledCardGrid = styled.div`
+const StyledCardGrid = styled.section`
   ${tw`mt-32 md:px-16`};
 
   h2,
