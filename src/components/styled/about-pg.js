@@ -21,6 +21,9 @@ const StyledAboutPg = styled.section`
     p {
       ${tw`mt-4 md:mt-0 md:col-span-6 md:col-start-7 md:text-lg`};
     }
+    ul {
+      ${tw`space-y-2`};
+    }
     a {
       ${tw`border-b-2`};
     }
