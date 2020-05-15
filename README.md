@@ -56,24 +56,32 @@ With the CSS utility library Tailwind you can quickly add styles and responsive 
 
 ```JSX
 /*
-  !remember to import styled from '@emotion/styled'
+  import tw from 'twin.macro';
+  import styled from '@emotion/styled';
 
-  creating a styled div, centering children via flex-box
+  ** Creating a styled div, centering children via flex-box **
 */
 
 const StyledDiv = styled.div`
   ${tw`flex justify-center items-center`}
 `
 
+const AltStyledDiv = tw.div`flex justify-center items-center`
+
 return (
-  <StyledDiv>
-    <p>I'm centred</p>
-    <p>Me too!</p>
-  </StyledDiv>
+ <>
+    <StyledDiv>
+      <p>I'm centred</p>
+      <p>Me too!</p>
+    </StyledDiv>
+    <AltStyledDiv>
+      <p>Same here</p>
+    </AltStyledDiv>
+ </>
 );
 ```
 
-The [tailwind website](https://tailwindcss.com) has great documentation to get you started. The starter uses [twin.macro](https://github.com/ben-rogerson/twin.macro) which also has some additional helpful utilities.
+The [tailwind docs](https://tailwindcss.com) are a great resource to get you started. The starter uses [twin.macro](https://github.com/ben-rogerson/twin.macro) which also has some additional helpful utilities.
 
 **Customisation**
 
