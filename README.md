@@ -1,7 +1,5 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="./src/images/icon/logo.png" width="80" />
-  </a>
+  <img alt="Gatsby" src="./src/images/icon/logo.png" width="80" />
 </p>
 <h1 align="center">
   Gatsby Emotion Tailwind Starter
