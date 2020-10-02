@@ -6,7 +6,7 @@ const StyledCardGrid = styled.section`
 
   h2,
   p {
-    ${tw`px-2 md:text-center md:px-0`};
+    ${tw`px-2 md:(text-center px-0)`};
   }
 
   h2 {
@@ -14,11 +14,11 @@ const StyledCardGrid = styled.section`
   }
 
   > p {
-    ${tw`mx-auto mt-4 text-xl font-light tracking-wider text-gray-600 md:text-center md:w-2/3`};
+    ${tw`mx-auto mt-4 text-xl font-light tracking-wider text-gray-600 md:(text-center w-2/3)`};
   }
 
   .cards {
-    ${tw`grid row-gap-10 col-gap-6 mt-16`};
+    ${tw`grid mt-16 gap-x-6 gap-y-10`};
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
     .card-wrapper {
