@@ -6,13 +6,13 @@ const StyledHeader = styled.header`
   nav {
     ${tw`md:pl-12`};
     > ul {
-      ${tw`flex flex-wrap items-center justify-center sm:justify-between`};
+      ${tw`flex flex-wrap justify-center sm:justify-between`};
       li {
         ${tw`text-xl text-center`};
         &.logo {
           ${tw`mr-auto`};
           a {
-            ${tw`flex items-center px-2 py-2 md:justify-center md:px-4`};
+            ${tw`flex items-center px-2 py-2 md:(justify-center px-4)`};
             svg {
               ${tw`block`};
               width: 38px;
@@ -22,7 +22,7 @@ const StyledHeader = styled.header`
         }
         &:not(.logo) {
           a {
-            ${tw`block ml-4 p-3 text-lg font-light tracking-wide text-gray-600 md:ml-0 md:py-8 md:px-10 hover:text-orange-500`};
+            ${tw`flex items-center min-h-full p-3 text-lg font-light tracking-wide text-gray-600 md:(ml-0 py-8 px-10) hover:text-orange-500`};
             &:hover {
               background: linear-gradient(
                   90deg,
