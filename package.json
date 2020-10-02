@@ -25,6 +25,7 @@
     "gatsby-plugin-sitemap": "^2.4.14",
     "gatsby-source-filesystem": "^2.3.32",
     "gatsby-transformer-sharp": "^2.5.16",
+    "postcss": "^8.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
@@ -36,6 +37,15 @@
     "babel-preset-gatsby": "^0.5.12",
     "cssnano": "^4.1.10",
     "prettier": "^2.1.2"
+  },
+  "babelMacros": {
+    "twin": {
+      "config": "tailwind.config.js",
+      "preset": "emotion",
+      "debugProp": true,
+      "debugPlugins": false,
+      "debug": false
+    }
   },
   "keywords": [
     "gatsby",
