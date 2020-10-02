@@ -19,7 +19,7 @@ const StyledAboutPg = styled.section`
     }
     ul,
     p {
-      ${tw`mt-4 md:mt-0 md:col-span-6 md:col-start-7 md:text-lg`};
+      ${tw`mt-4 md:(mt-0 col-span-6 col-start-7 text-lg)`};
     }
     ul {
       ${tw`space-y-2`};
