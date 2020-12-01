@@ -30,7 +30,7 @@ const StyledAboutPg = styled.section`
 
     &.starter {
       a {
-        ${tw`border-orange-500 hover:text-orange-500`};
+        ${tw`border-yellow-500 hover:text-yellow-500`};
       }
     }
     &.tech {
@@ -42,7 +42,7 @@ const StyledAboutPg = styled.section`
           ${tw`text-pink-600 border-pink-600`};
         }
         &.tailwind {
-          ${tw`text-teal-500 border-teal-500`};
+          ${tw`text-blue-500 border-blue-500`};
         }
       }
     }
@@ -50,7 +50,7 @@ const StyledAboutPg = styled.section`
       ul {
         ${tw`list-disc list-inside`};
         a {
-          ${tw`border-orange-500 hover:text-orange-500`};
+          ${tw`border-yellow-500 hover:text-yellow-500`};
         }
       }
     }
