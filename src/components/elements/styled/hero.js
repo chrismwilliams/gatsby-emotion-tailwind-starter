@@ -29,7 +29,7 @@ const StyledHero = styled.section`
     h2 {
       ${tw`mt-12 text-xl font-light leading-loose text-gray-700 md:(text-2xl col-span-6)`};
       a {
-        ${tw`border-b-2 border-orange-500 hover:text-orange-500`};
+        ${tw`border-b-2 border-yellow-500 hover:text-yellow-500`};
       }
     }
 

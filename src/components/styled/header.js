@@ -22,7 +22,7 @@ const StyledHeader = styled.header`
         }
         &:not(.logo) {
           a {
-            ${tw`flex items-center min-h-full p-3 text-lg font-light tracking-wide text-gray-600 md:(ml-0 py-8 px-10) hover:text-orange-500`};
+            ${tw`flex items-center min-h-full p-3 text-lg font-light tracking-wide text-gray-600 md:(ml-0 py-8 px-10) hover:text-yellow-500`};
             &:hover {
               background: linear-gradient(
                   90deg,
