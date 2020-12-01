@@ -4,8 +4,26 @@
       "babel-preset-gatsby",
       {
         "targets": {
-          "browsers": ["> 1%", "last 2 versions", "Firefox ESR"]
+          "browsers": [">0.25%", "not dead"]
         }
+      }
+    ]
+  ],
+  "plugins": [
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    [
+      "@emotion/babel-plugin-jsx-pragmatic",
+      {
+        "export": "jsx",
+        "import": "__cssprop",
+        "module": "@emotion/react"
+      }
+    ],
+    [
+      "@babel/plugin-transform-react-jsx",
+      {
+        "pragma": "__cssprop",
+        "pragmaFrag": "React.Fragment"
       }
     ]
   ]
