@@ -1,4 +1,4 @@
-import 'typeface-open-sans';
+import '@fontsource/open-sans';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 

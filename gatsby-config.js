@@ -21,15 +21,21 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-emotion`,
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS,
+        // https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-emotion#options
       },
     },
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
         tailwind: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS,
       },
     },
     {
