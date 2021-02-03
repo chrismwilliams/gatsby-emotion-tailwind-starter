@@ -54,8 +54,7 @@ With the CSS utility library Tailwind you can quickly add styles and responsive 
 
 ```JSX
 /*
-  import tw from 'twin.macro';
-  import styled from '@emotion/styled';
+  import tw, { styled } from 'twin.macro';
 
   ** Creating a styled div, centering children via flex-box **
 */
