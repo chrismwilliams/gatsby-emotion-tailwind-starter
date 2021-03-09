@@ -1,12 +1,9 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
+import { StaticImage } from 'gatsby-plugin-image';
 
 import StyledHero from './styled/hero';
 
 export default function Hero() {
-  const { gatsbyImg, emotionImg, tailwindImg } = useStaticQuery(HeroQuery);
-
   return (
     <StyledHero>
       <div className="hero-wrapper">
@@ -520,13 +517,22 @@ export default function Hero() {
         <div className="tech">
           <ul>
             <li>
-              <Img fluid={gatsbyImg.childImageSharp.fluid} />
+              <StaticImage
+                src="../../images/gatsby.png"
+                placeholder="blurred"
+              />
             </li>
             <li>
-              <Img fluid={emotionImg.childImageSharp.fluid} />
+              <StaticImage
+                src="../../images/emotion.png"
+                placeholder="blurred"
+              />
             </li>
             <li>
-              <Img fluid={tailwindImg.childImageSharp.fluid} />
+              <StaticImage
+                src="../../images/tailwind.png"
+                placeholder="blurred"
+              />
             </li>
           </ul>
         </div>
@@ -534,24 +540,3 @@ export default function Hero() {
     </StyledHero>
   );
 }
-
-const HeroQuery = graphql`
-  fragment TechImg on File {
-    childImageSharp {
-      fluid(maxWidth: 240) {
-        ...GatsbyImageSharpFluid_withWebp
-      }
-    }
-  }
-  query {
-    gatsbyImg: file(relativePath: { eq: "gatsby.png" }) {
-      ...TechImg
-    }
-    emotionImg: file(relativePath: { eq: "emotion.png" }) {
-      ...TechImg
-    }
-    tailwindImg: file(relativePath: { eq: "tailwind.png" }) {
-      ...TechImg
-    }
-  }
-`;

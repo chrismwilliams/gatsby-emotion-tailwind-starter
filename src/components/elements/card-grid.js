@@ -1,6 +1,5 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import { StaticImage } from 'gatsby-plugin-image';
 
 import Card from './card';
 import StyledCardGrid from './styled/card-grid';
@@ -27,8 +26,6 @@ const tempCardData = {
 };
 
 export default function CardGrid() {
-  const { pugGallery } = useStaticQuery(CardGridQuery);
-
   return (
     <StyledCardGrid>
       <h2>Example Project Cards</h2>
@@ -37,31 +34,67 @@ export default function CardGrid() {
         labore natus atque, ducimus sed.
       </p>
       <div className="cards">
-        {pugGallery.nodes.map((node, i) => (
-          <Card key={`hipster pug image ${i + 1}`} title={`Project ${i + 1}`}>
-            <Img fluid={node.childImageSharp.fluid} alt="Pug" />
-            <div className="card-content">
-              <span className="type">{tempCardData.getRandomItem('type')}</span>
-              <h3>{tempCardData.getRandomItem('title')}</h3>
-              <p>{tempCardData.getRandomItem('lorem')}</p>
-            </div>
-          </Card>
-        ))}
+        <Card title="Project 1">
+          <StaticImage
+            src="../../images/pugs/pug-1.jpg"
+            alt="Pug"
+            placeholder="blurred"
+          />
+          <div className="card-content">
+            <span className="type">{tempCardData.getRandomItem('type')}</span>
+            <h3>{tempCardData.getRandomItem('title')}</h3>
+            <p>{tempCardData.getRandomItem('lorem')}</p>
+          </div>
+        </Card>
+        <Card title="Project 2">
+          <StaticImage
+            src="../../images/pugs/pug-2.jpg"
+            alt="Pug"
+            placeholder="blurred"
+          />
+          <div className="card-content">
+            <span className="type">{tempCardData.getRandomItem('type')}</span>
+            <h3>{tempCardData.getRandomItem('title')}</h3>
+            <p>{tempCardData.getRandomItem('lorem')}</p>
+          </div>
+        </Card>
+        <Card title="Project 3">
+          <StaticImage
+            src="../../images/pugs/pug-3.jpg"
+            alt="Pug"
+            placeholder="blurred"
+          />
+          <div className="card-content">
+            <span className="type">{tempCardData.getRandomItem('type')}</span>
+            <h3>{tempCardData.getRandomItem('title')}</h3>
+            <p>{tempCardData.getRandomItem('lorem')}</p>
+          </div>
+        </Card>
+        <Card title="Project 4">
+          <StaticImage
+            src="../../images/pugs/pug-4.jpg"
+            alt="Pug"
+            placeholder="blurred"
+          />
+          <div className="card-content">
+            <span className="type">{tempCardData.getRandomItem('type')}</span>
+            <h3>{tempCardData.getRandomItem('title')}</h3>
+            <p>{tempCardData.getRandomItem('lorem')}</p>
+          </div>
+        </Card>
+        <Card title="Project 5">
+          <StaticImage
+            src="../../images/pugs/pug-5.jpg"
+            alt="Pug"
+            placeholder="blurred"
+          />
+          <div className="card-content">
+            <span className="type">{tempCardData.getRandomItem('type')}</span>
+            <h3>{tempCardData.getRandomItem('title')}</h3>
+            <p>{tempCardData.getRandomItem('lorem')}</p>
+          </div>
+        </Card>
       </div>
     </StyledCardGrid>
   );
 }
-
-const CardGridQuery = graphql`
-  query CardGridQuery {
-    pugGallery: allFile(filter: { relativeDirectory: { eq: "pugs" } }) {
-      nodes {
-        childImageSharp {
-          fluid(maxWidth: 325) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  }
-`;
