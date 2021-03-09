@@ -502,7 +502,7 @@ export default function Hero() {
           </svg>
         </div>
         <h2>
-          I come pre-packed with Emotion and Tailwind CSS for styling your
+          I come pre-packed with Emotion and Tailwind CSS for styling
           components. I support cool modern features like lazy-loading images,
           code and data splitting, and offline support. Check out the source
           code{' '}
