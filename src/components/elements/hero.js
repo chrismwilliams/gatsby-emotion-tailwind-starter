@@ -470,7 +470,7 @@ export default function Hero() {
             />
             <path
               stroke="#4c4981"
-              stroke-miterlimit="10"
+              strokeMiterlimit="10"
               d="M802.18 306.93v4.12l-5.88-.57L785.24 299s17.11 3.83 16.94 7.93zM818.13 347.89l-4.12-6.8v-27.43c8.15 15.14 4.12 34.23 4.12 34.23z"
               opacity=".1"
             />
@@ -502,9 +502,10 @@ export default function Hero() {
           </svg>
         </div>
         <h2>
-          I'm a Gatsby JS starter pre-packed with Emotion and Tailwind CSS. I
-          come with some cool modern features, like lazy-loading images, code
-          and data splitting, and offline support. Check out the source code{' '}
+          I come pre-packed with Emotion and Tailwind CSS for styling your
+          components. I support cool modern features like lazy-loading images,
+          code and data splitting, and offline support. Check out the source
+          code{' '}
           <a
             href="https://github.com/chrismwilliams/gatsby-emotion-tailwind-starter"
             target="_blank"
@@ -520,18 +521,21 @@ export default function Hero() {
               <StaticImage
                 src="../../images/gatsby.png"
                 placeholder="blurred"
+                alt="Gatsby JS Logo"
               />
             </li>
             <li>
               <StaticImage
                 src="../../images/emotion.png"
                 placeholder="blurred"
+                alt="Emotion CSS in JS Logo"
               />
             </li>
             <li>
               <StaticImage
                 src="../../images/tailwind.png"
                 placeholder="blurred"
+                alt="Tailwind CSS logo"
               />
             </li>
           </ul>
