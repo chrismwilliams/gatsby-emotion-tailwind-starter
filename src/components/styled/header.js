@@ -6,7 +6,7 @@ const StyledHeader = styled.header`
   nav {
     ${tw`md:pl-12`};
     > ul {
-      ${tw`flex flex-wrap justify-center sm:justify-between`};
+      ${tw`flex flex-wrap items-center justify-center sm:justify-between`};
       li {
         ${tw`text-xl text-center`};
         &.logo {
@@ -22,17 +22,7 @@ const StyledHeader = styled.header`
         }
         &:not(.logo) {
           a {
-            ${tw`flex items-center min-h-full p-3 text-lg font-light tracking-wide text-gray-600 md:(ml-0 py-8 px-10) hover:text-yellow-500`};
-            &:hover {
-              background: linear-gradient(
-                  90deg,
-                  #663399 0%,
-                  #b721ff 20%,
-                  #ffb238 60%,
-                  #73fff7 95%
-                )
-                fixed;
-            }
+            ${tw`flex items-center p-3 text-lg tracking-wide text-gray-600 border-b-2 border-transparent hover:border-gray-600 md:(ml-0 px-10)`};
           }
         }
       }
