@@ -14,12 +14,6 @@ const StyledFooter = styled.footer`
       max-height: 50px;
     }
   }
-  .social-list {
-    ${tw`mt-4 text-2xl`}
-    svg {
-      ${tw`block w-6!`};
-    }
-  }
   .author {
     ${tw`mt-2 text-sm font-light`};
     a {

@@ -20,26 +20,6 @@ const StyledCardGrid = styled.section`
   .cards {
     ${tw`grid mt-16 gap-x-6 gap-y-10`};
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-    .card-wrapper {
-      ${tw`shadow-md md:rounded-lg hover:shadow-xl`};
-      .gatsby-image-wrapper {
-        ${tw`w-full`};
-        max-height: 450px;
-      }
-
-      .card-content {
-        .type {
-          ${tw`text-sm font-light text-indigo-500 capitalize`};
-        }
-        h3 {
-          ${tw`mt-3 text-xl font-semibold text-gray-800`};
-        }
-        p {
-          ${tw`mt-4 font-light tracking-wide text-gray-600`};
-        }
-      }
-    }
   }
 `;
 

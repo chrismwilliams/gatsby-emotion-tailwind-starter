@@ -10,7 +10,7 @@ import StyledSocialList from './styled/social-list';
 
 export default function SocialList(props) {
   return (
-    <StyledSocialList className="social-list" {...props}>
+    <StyledSocialList {...props}>
       <li>
         <a
           href="https://github.com/chrismwilliams/gatsby-emotion-tailwind-starter"
