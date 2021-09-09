@@ -10,6 +10,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-emotion`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
@@ -19,12 +20,6 @@ module.exports = {
       options: {
         path: `${__dirname}/src/images/`,
         name: `images`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-emotion`,
-      options: {
-        // https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-emotion#options
       },
     },
     {
