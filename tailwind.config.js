@@ -1,7 +1,8 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
-// gatsby-plugin-purgecss already handling unused css.
 module.exports = {
+  darkMode: 'class',
+  // gatsby-plugin-purgecss already handling unused css.
   purge: {
     enabled: false,
   },
@@ -9,6 +10,16 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
+      },
+      colors: {
+        turquoise: '#73fff7',
+      },
+      backgroundColor: {
+        primary: 'var(--bg-primary)',
+      },
+      textColor: {
+        primary: 'var(--text-primary)',
+        dark: 'var(--text-dark)',
       },
     },
   },
