@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import StyledFooter from './styled/footer';
-import SocialList from './elements/social-list';
+import SocialList from './SocialList';
 
 export default function Footer() {
   const {
@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <StyledFooter>
       <p className="title">
-        <svg>
+        <svg role="img" aria-hidden="true">
           <use xlinkHref="/logo.svg#logo" />
         </svg>
         {siteMetadata.title}
