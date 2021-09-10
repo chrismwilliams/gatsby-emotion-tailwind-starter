@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Layout, SEO } from '../components/elements';
-import StyledAboutPg from '../components/styled/about-pg';
+import { Layout, Seo } from '../components';
+import StyledAboutPg from '../components/about/aboutStyles';
 
-export default function aboutPage() {
+export default function AboutPage() {
   return (
     <Layout>
-      <SEO title="About" description="About Us page" />
+      <Seo title="About" description="About Us page" />
       <StyledAboutPg>
         <h1>About</h1>
         <div>
@@ -61,6 +61,7 @@ export default function aboutPage() {
             <h2>Features</h2>
             <ul>
               <li>Lazy loading</li>
+              <li>Dark Theme</li>
               <li>Support for Google Analytics</li>
               <li>Mobile friendly through Tailwind's utility classes</li>
               <li>SEO friendly</li>
