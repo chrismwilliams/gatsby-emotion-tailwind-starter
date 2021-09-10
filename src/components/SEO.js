@@ -31,7 +31,7 @@ export default function SEO({ title, description }) {
 }
 
 SEO.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   description: PropTypes.string,
 };
 

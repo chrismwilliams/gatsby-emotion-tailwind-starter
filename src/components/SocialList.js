@@ -1,47 +1,60 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faCodepen,
   faGithub,
   faTwitter,
+  faDiscord,
+  faDev,
 } from '@fortawesome/free-brands-svg-icons';
 
-import StyledSocialList from './styled/social-list';
+import { StyledSocialList, StyledButton } from './styled';
 
 export default function SocialList(props) {
   return (
     <StyledSocialList {...props}>
       <li>
-        <a
+        <StyledButton
+          as="a"
           href="https://github.com/chrismwilliams/gatsby-emotion-tailwind-starter"
           aria-label="github repo"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FontAwesomeIcon icon={faGithub} />
-        </a>
+        </StyledButton>
       </li>
       <li>
-        <a
+        <StyledButton
+          as="a"
           href="https://github.com/chrismwilliams/gatsby-emotion-tailwind-starter"
           aria-label="github repo"
           target="_blank"
           rel="noopener noreferrer"
         >
-          {' '}
           <FontAwesomeIcon icon={faTwitter} />
-        </a>
+        </StyledButton>
       </li>
       <li>
-        <a
+        <StyledButton
+          as="a"
           href="https://github.com/chrismwilliams/gatsby-emotion-tailwind-starter"
           aria-label="github repo"
           target="_blank"
           rel="noopener noreferrer"
         >
-          {' '}
-          <FontAwesomeIcon icon={faCodepen} />
-        </a>
+          <FontAwesomeIcon icon={faDev} />
+        </StyledButton>
+      </li>
+      <li>
+        <StyledButton
+          as="a"
+          href="https://github.com/chrismwilliams/gatsby-emotion-tailwind-starter"
+          aria-label="github repo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faDiscord} />
+        </StyledButton>
       </li>
     </StyledSocialList>
   );
