@@ -24,6 +24,7 @@ A starter template to create a lightening-fast static website. Comes pre-built w
 - Progressive Web App
 - Lazy loading images with webp support
 - Auto-Generated sitemap
+- Dark Mode
 - Google Analytics
 
 ## Getting started
@@ -63,7 +64,10 @@ const StyledDiv = styled.div`
   ${tw`flex justify-center items-center`}
 `
 
-const AltStyledDiv = tw.div`flex justify-center items-center`
+/*
+  ** Or with grid **
+*/
+const AltStyledDiv = tw.div`grid place-content-center place-items-center`
 
 return (
  <>
@@ -78,13 +82,15 @@ return (
 );
 ```
 
-The [tailwind docs](https://tailwindcss.com) are a great resource to get you started. The starter uses [twin.macro](https://github.com/ben-rogerson/twin.macro) which also has some additional helpful utilities.
+The [tailwind docs](https://tailwindcss.com) is a great resource to get you started. The starter uses [twin.macro](https://github.com/ben-rogerson/twin.macro) which is a fantastic library, and includes many additional variants.
 
 **Customisation**
 
 - [Tailwind config](https://tailwindcss.com/docs/configuration). Open up the `tailwind.config.js` file to set your own project preferences & requirements, such as break-points, colours, and fonts.
 
-- A layout component (`src/components/elements/layout.js`) is used for setting a standardised default layout.
+- A layout component (`src/components/Layout.js`) is used for setting a standardised default layout to wrap pages.
+
+- Dark & Light mode. Open up `src/components/styled/baseStyles.js` and `tailwind.config.js` to see where/how CSS custom properties are added.
 
 - This template uses the plugin [typefaces](https://github.com/KyleAMathews/typefaces/blob/master/README.md) to optimise font delivery. Changing font(s) simply requires installing your favourite typeface-font and importing into `gatsby-browser.js`. Remember to add your font(s) into `tailwind.config.js`, either the fonts sans/serif array, in order to use it with tailwind utilities.
 
