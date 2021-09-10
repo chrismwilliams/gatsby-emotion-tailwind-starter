@@ -40,12 +40,18 @@ _Navigate into template directory_
 
 ```sh
 # install dependencies
-yarn install
+npm install
+# yarn
+yarn
 
 # development with hot re-load
+npm run dev
+# yarn
 yarn dev
 
 # build for production
+npm run build
+# yarn
 yarn build
 ```
 
