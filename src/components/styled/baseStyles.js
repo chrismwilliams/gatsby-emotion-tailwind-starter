@@ -1,16 +1,15 @@
-import tw, { css } from 'twin.macro';
-import colors from 'tailwindcss/colors';
+import tw, { css, theme } from 'twin.macro';
 
 const baseStyles = css`
   .light {
-    --bg-primary: ${colors.white};
-    --text-primary: ${colors.gray[600]};
-    --text-dark: ${colors.gray[700]};
+    --bg-primary: ${theme`colors.white`};
+    --text-primary: ${theme`colors.gray.600`};
+    --text-dark: ${theme`colors.gray.700`};
   }
 
   .dark {
-    --bg-primary: ${colors.gray[700]};
-    --text-primary: ${colors.purple[50]};
+    --bg-primary: ${theme`colors.gray.700`};
+    --text-primary: ${theme`colors.purple.50`};
   }
 
   body {

@@ -30,14 +30,14 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
-    "tailwindcss": "^2.2.7",
+    "tailwindcss": "^2.2.15",
     "twin.macro": "^2.7.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.4",
     "babel-preset-gatsby": "^1.13.0",
     "cssnano": "^5.0.8",
-    "prettier": "^2.4.0"
+    "prettier": "^2.4.1"
   },
   "babelMacros": {
     "twin": {
