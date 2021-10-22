@@ -24,10 +24,9 @@ A starter template to create a lightening-fast static website. Comes pre-built w
 - Progressive Web App
 - Lazy loading images with webp support
 - Auto-Generated sitemap
-- Dark Mode
-- Google Analytics
+- Dark Mode [Tailwind CSS variant](https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually)
 
-## Getting started
+## Getting started 🚀
 
 ```sh
 # download the template zip via dropdown or
@@ -55,7 +54,7 @@ npm run build
 yarn build
 ```
 
-**Using Emotion & Tailwind**
+## Using Emotion & Tailwind
 
 With the CSS utility library Tailwind you can quickly add styles and responsive design, all without having to write any css. Emotion allows you to name and style elements within your js files.
 
@@ -88,20 +87,18 @@ return (
 );
 ```
 
-The [tailwind docs](https://tailwindcss.com) is a great resource to get you started. The starter uses [twin.macro](https://github.com/ben-rogerson/twin.macro) which is a fantastic library, and includes many additional variants.
+The [tailwind docs](https://tailwindcss.com) are a great resource to get you started. The starter uses [twin.macro](https://github.com/ben-rogerson/twin.macro) which is a fantastic library, and includes many additional variants.
 
-**Customisation**
+## Customisation
 
 - [Tailwind config](https://tailwindcss.com/docs/configuration). Open up the `tailwind.config.js` file to set your own project preferences & requirements, such as break-points, colours, and fonts.
 
 - A layout component (`src/components/Layout.js`) is used for setting a standardised default layout to wrap pages.
 
-- Dark & Light mode. Open up `src/components/styled/baseStyles.js` and `tailwind.config.js` to see where/how CSS custom properties are added.
+- Dark & Light mode. Open up `src/components/styled/baseStyles.js` and `tailwind.config.js` to see where/how CSS custom variables are added. You can also use Tailwinds' [dark variant](https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually) within styled components, as shown in `src/components/home/styled/card.js` with a dark variant, and `src/components/styled/socialList.js` for a light variant.
 
 - This template uses the plugin [typefaces](https://github.com/KyleAMathews/typefaces/blob/master/README.md) to optimise font delivery. Changing font(s) simply requires installing your favourite typeface-font and importing into `gatsby-browser.js`. Remember to add your font(s) into `tailwind.config.js`, either the fonts sans/serif array, in order to use it with tailwind utilities.
 
 - SEO component, taken from [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog), allowing you to add your SEO descriptions & title's.
 
 - Favicon. Auto-generated from [gatsby-plugin-manifest](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-manifest#readme) set in `gatsby-config.js`. Replace the current favicon (`src/images/icon/logo.png`) with your own 512x512 icon
-
-- Analytics. Add your google analytics id via an .env file `GOOGLE_ANALYTICS` to get started.

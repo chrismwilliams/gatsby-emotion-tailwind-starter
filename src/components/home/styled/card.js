@@ -13,7 +13,7 @@ const StyledCard = styled.div`
     .card-content {
       ${tw`relative p-4 bg-primary`};
       .type {
-        ${tw`text-sm font-light text-indigo-500 capitalize`};
+        ${tw`text-sm font-light text-indigo-500 capitalize dark:text-indigo-100`};
       }
       h3 {
         ${tw`mt-3 text-xl font-semibold`};

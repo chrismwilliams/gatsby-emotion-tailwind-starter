@@ -62,7 +62,6 @@ export default function AboutPage() {
             <ul>
               <li>Lazy loading</li>
               <li>Dark & Light Theme</li>
-              <li>Support for Google Analytics</li>
               <li>Mobile friendly through Tailwind's utility classes</li>
               <li>SEO friendly</li>
               <li>Offline support</li>

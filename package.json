@@ -15,7 +15,6 @@
     "dotenv": "^10.0.0",
     "gatsby": "^3.13.0",
     "gatsby-plugin-emotion": "^6.13.0",
-    "gatsby-plugin-google-analytics": "^3.13.0",
     "gatsby-plugin-image": "^1.13.0",
     "gatsby-plugin-manifest": "^3.13.0",
     "gatsby-plugin-offline": "^4.13.0",
