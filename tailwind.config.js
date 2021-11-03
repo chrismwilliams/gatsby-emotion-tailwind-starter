@@ -3,10 +3,6 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   // uses the class strat -> https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually
   darkMode: 'class',
-  // gatsby-plugin-purgecss already handling unused css.
-  purge: {
-    enabled: false,
-  },
   theme: {
     extend: {
       fontFamily: {

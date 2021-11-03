@@ -13,13 +13,15 @@ integration-tests/**/public
 www/public
 
 # cache-dirs
-**/.cache
+.cache
+public
 
 # ignore built packages
 packages/**/*.js
 !packages/gatsby/cache-dir/**/*.js
 !packages/*/src/**/*.js
 packages/gatsby/cache-dir/commonjs/**/*.js
+package-lock.json
 
 # fixtures
 **/__testfixtures__/**
