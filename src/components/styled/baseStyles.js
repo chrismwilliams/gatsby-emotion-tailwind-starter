@@ -23,7 +23,7 @@ const baseStyles = css`
     }
 
     a {
-      ${tw`focus:ring-2 ring-purple-300`};
+      ${tw`focus:(outline-none) focus-visible:(outline-none ring-2 ring-purple-300)`};
     }
 
     #skip-link {

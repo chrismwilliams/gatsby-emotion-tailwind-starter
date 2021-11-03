@@ -19,10 +19,10 @@ const StyledToggle = styled.label`
   input:checked + span::before {
     ${tw`translate-x-4 bg-gray-800`};
   }
-  input:focus + span::before {
+  input:focus-visible + span::before {
     ${tw`ring-2 ring-indigo-800`};
   }
-  input:checked:focus + span::before {
+  input:checked:focus-visible + span::before {
     ${tw`ring-2 ring-white`};
   }
 `;

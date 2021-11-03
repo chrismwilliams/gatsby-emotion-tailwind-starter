@@ -11,7 +11,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-emotion`,
-    `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -20,12 +19,6 @@ module.exports = {
       options: {
         path: `${__dirname}/src/images/`,
         name: `images`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-purgecss`,
-      options: {
-        tailwind: true,
       },
     },
     {
