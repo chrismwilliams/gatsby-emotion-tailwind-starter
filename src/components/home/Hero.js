@@ -1,8 +1,8 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 
-import useTheme from '../../hooks/use-theme';
-import StyledHero from './styled/hero';
+import useTheme from '@hooks/use-theme';
+import { StyledHero } from './styles';
 
 export default function Hero() {
   const { isDark } = useTheme();

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import StyledNav from './styled/nav';
+import { StyledNav } from './styles';
 
 export default function Nav() {
   return (

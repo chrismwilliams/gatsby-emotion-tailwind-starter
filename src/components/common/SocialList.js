@@ -7,7 +7,7 @@ import {
   faDev,
 } from '@fortawesome/free-brands-svg-icons';
 
-import { StyledSocialList, StyledButton } from './styled';
+import { StyledSocialList, StyledButton } from './styles';
 
 export default function SocialList(props) {
   return (

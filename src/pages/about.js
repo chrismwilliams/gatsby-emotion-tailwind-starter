@@ -1,13 +1,14 @@
 import React from 'react';
 
-import { Layout, Seo } from '../components';
-import StyledAboutPg from '../components/about/aboutStyles';
+import { Main } from '@layout';
+import { Seo } from '@common';
+import { StyledAbout } from '@about/styles';
 
 export default function AboutPage() {
   return (
-    <Layout>
+    <Main>
       <Seo title="About" description="About Us page" />
-      <StyledAboutPg>
+      <StyledAbout>
         <h1>About</h1>
         <div>
           <div className="section starter">
@@ -95,7 +96,7 @@ export default function AboutPage() {
             </ul>
           </div>
         </div>
-      </StyledAboutPg>
-    </Layout>
+      </StyledAbout>
+    </Main>
   );
 }

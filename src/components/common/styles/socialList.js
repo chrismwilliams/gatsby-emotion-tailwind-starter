@@ -1,7 +1,7 @@
 import tw, { styled } from 'twin.macro';
 
-import { StyledButton } from './';
-import StyledFooter from './footer';
+import StyledButton from './button';
+import { StyledFooter } from '@layout/styles';
 
 const StyledSocialList = styled.ul`
   ${tw`grid justify-center grid-flow-col gap-x-4`};

@@ -1,8 +1,7 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 
-import StyledCardGrid from './styled/cardGrid';
-import StyledCard from './styled/card';
+import { StyledCardGrid, StyledCard } from './styles';
 
 export default function CardGrid() {
   return (

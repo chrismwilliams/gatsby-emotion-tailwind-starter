@@ -1,7 +1,7 @@
 import React from 'react';
 
-import useTheme from '../hooks/use-theme';
-import StyledToggle from './styled/themeToggle';
+import useTheme from '@hooks/use-theme';
+import { StyledToggle } from './styles';
 
 export default function ThemeToggle() {
   const { isDark, setTheme } = useTheme();

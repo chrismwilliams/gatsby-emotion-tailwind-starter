@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Nav from './Nav';
-import ThemeToggle from './ThemeToggle';
-import StyledHeader from './styled/header';
+import { Nav } from './';
+import { ThemeToggle } from '@common';
+import { StyledHeader } from './styles';
 
 export default function Header() {
   return (

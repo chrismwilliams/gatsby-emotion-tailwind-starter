@@ -1,15 +1,15 @@
 import React from 'react';
 
-import { Layout, Seo } from '../components';
-import Hero from '../components/home/Hero';
-import CardGrid from '../components/home/CardGrid';
+import { Main } from '@layout';
+import { Seo } from '@common';
+import { Hero, CardGrid } from '@home';
 
 export default function IndexPage() {
   return (
-    <Layout>
+    <Main>
       <Seo description="Home page for a Gatsby Starter, featuring Emotion and Tailwind css" />
       <Hero />
       <CardGrid />
-    </Layout>
+    </Main>
   );
 }

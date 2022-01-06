@@ -1,8 +1,8 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
-import StyledFooter from './styled/footer';
-import SocialList from './SocialList';
+import { StyledFooter } from './styles';
+import { SocialList } from '@common';
 
 export default function Footer() {
   const {

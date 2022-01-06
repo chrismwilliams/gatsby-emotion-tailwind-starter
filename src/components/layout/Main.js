@@ -2,11 +2,10 @@ import React from 'react';
 import { GlobalStyles } from 'twin.macro';
 import { Global } from '@emotion/react';
 
-import Header from './Header';
-import Footer from './Footer';
-import baseStyles from './styled/baseStyles';
+import { Header, Footer } from './';
+import { baseStyles } from './styles';
 
-export default function Layout({ children }) {
+export default function MainLayout({ children }) {
   return (
     <>
       <GlobalStyles />

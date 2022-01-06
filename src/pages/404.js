@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Layout } from '../components';
+import { Main } from '@layout';
 
 export default function NotFoundPage() {
   return (
-    <Layout>
+    <Main>
       <h1>Not Found!</h1>
       <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    </Layout>
+    </Main>
   );
 }
