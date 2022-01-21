@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <StyledFooter>
       <p className="title">
-        <svg role="img" aria-hidden="true">
+        <svg aria-hidden="true" focusable="false">
           <use xlinkHref="/logo.svg#logo" />
         </svg>
         {siteMetadata.title}

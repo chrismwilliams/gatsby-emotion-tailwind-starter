@@ -12,6 +12,7 @@ export default function SEO({ title, description }) {
     description: description || siteMetadata.description,
     url: siteMetadata.siteUrl,
     author: siteMetadata.author,
+    locale: siteMetadata.locale,
   };
   return (
     <Helmet
@@ -19,9 +20,9 @@ export default function SEO({ title, description }) {
       defaultTitle={siteMetadata.title}
       titleTemplate={`%s - ${siteMetadata.title}`}
     >
-      <html lang="en-GB" />
+      <html lang={seo.locale} />
       <meta name="description" content={seo.description} />
-      <meta property="og:locale" content="en_UK" />
+      <meta property="og:locale" content={seo.locale} />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={seo.title} />
       <meta property="og:description" content={seo.description} />
@@ -43,6 +44,7 @@ const seoQuery = graphql`
         description
         author
         siteUrl
+        locale
       }
     }
   }
