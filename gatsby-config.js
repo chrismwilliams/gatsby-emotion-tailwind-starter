@@ -1,11 +1,10 @@
-require('dotenv').config({ path: `.env` });
-
 module.exports = {
   siteMetadata: {
     author: `Chris Williams`,
     title: `Gatsby Emotion Tailwind Starter`,
     description: `An example Gatsby starter making use of emotion and tailwind`,
     siteUrl: `https://gatsby-emotion-tailwind-starter.netlify.app/`,
+    locale: `en_GB`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
