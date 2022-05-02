@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
+import { LightBackground, DarkBackground } from '@layout/styles/baseStyles';
 
 export default function SEO({ title, description }) {
   const {
@@ -24,6 +25,16 @@ export default function SEO({ title, description }) {
       <meta name="description" content={seo.description} />
       <meta property="og:locale" content={seo.locale} />
       <meta property="og:type" content="website" />
+      <meta
+        name="theme-color"
+        content={LightBackground}
+        media="(prefers-color-scheme: light)"
+      />
+      <meta
+        name="theme-color"
+        content={DarkBackground}
+        media="(prefers-color-scheme: dark)"
+      />
       <meta property="og:title" content={seo.title} />
       <meta property="og:description" content={seo.description} />
       <meta property="og:url" content={seo.url} />

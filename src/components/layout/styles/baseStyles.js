@@ -1,14 +1,17 @@
 import tw, { css, theme } from 'twin.macro';
 
+export const LightBackground = theme`colors.white`;
+export const DarkBackground = theme`colors.gray.700`;
+
 const baseStyles = css`
   .light {
-    --bg-primary: ${theme`colors.white`};
+    --bg-primary: ${LightBackground};
     --text-primary: ${theme`colors.gray.600`};
     --text-dark: ${theme`colors.gray.700`};
   }
 
   .dark {
-    --bg-primary: ${theme`colors.gray.700`};
+    --bg-primary: ${DarkBackground};
     --text-primary: ${theme`colors.purple.50`};
   }
 
