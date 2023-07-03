@@ -5,6 +5,10 @@
   Gatsby Emotion Tailwind Starter
 </h1>
 
+<h2>
+  **Please note that this template in no longer maintained**
+</h2>
+
 <p align="center">
   <img src="https://api.netlify.com/api/v1/badges/55304957-dc11-4f85-9975-157021aa405a/deploy-status" alt="Netlify Deploy Status">
 </p>
